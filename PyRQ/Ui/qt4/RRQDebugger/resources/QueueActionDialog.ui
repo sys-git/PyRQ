@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabCreate">
+         <attribute name="title">
+          <string>Create</string>
+         </attribute>
+         <widget class="QPushButton" name="pushButton_Create">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>160</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Create...</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_CreateCount">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>40</y>
+            <width>161</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>count:           </string>
+          </property>
+          <property name="minimum">
+           <number>1</number>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_CreateMaxsize">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>80</y>
+            <width>161</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>max size:           </string>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>100000000</number>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_Create">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>200</y>
+            <width>501</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_CreateTimeout">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>120</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>Timeout:            </string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>100000</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_CreateQueueType">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>7</y>
+            <width>161</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>list(synchronized)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>multiprocessing.Queue</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>don't care</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>surprise me!</string>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>45</x>
+            <y>10</y>
+            <width>131</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue Type:</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabClose">
+         <attribute name="title">
+          <string>Close</string>
+         </attribute>
+         <widget class="QComboBox" name="comboBox_QueueClose">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>30</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_Close">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>120</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Close...</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_CloseAll">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>170</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Close All...</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabPut">
+         <attribute name="title">
+          <string>Put</string>
+         </attribute>
+         <widget class="QComboBox" name="comboBox_QueuePut">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>30</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>35</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_Put">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>210</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Put...</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_Content">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>80</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>85</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Content:</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_PutBlock">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>130</y>
+            <width>97</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Block?</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_PutTimeout">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>170</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>Timeout:            </string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>100000</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabGet">
+         <attribute name="title">
+          <string>Get</string>
+         </attribute>
+         <widget class="QComboBox" name="comboBox_QueueGet">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>30</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_GetTimeout">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>120</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>Timeout:            </string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>100000</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_GetBlock">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>80</y>
+            <width>97</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Block?</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_Get">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>160</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Get...</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_Get">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>200</y>
+            <width>501</width>
+            <height>51</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabQSize">
+         <attribute name="title">
+          <string>QSize</string>
+         </attribute>
+         <widget class="QComboBox" name="comboBox_QueueQSize">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>30</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_QSize">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>200</y>
+            <width>501</width>
+            <height>51</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_QSize">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>160</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>QSize...</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_QSizeTimeout">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>120</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>Timeout:            </string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>100000</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="tabMaxQSize">
+         <attribute name="title">
+          <string>MaxQSize</string>
+         </attribute>
+         <widget class="QComboBox" name="comboBox_QueueMaxQSize">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>30</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>71</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Queue:</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_MaxQSize">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>160</y>
+            <width>98</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>MaxQSize...</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_MaxQSize">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>200</y>
+            <width>501</width>
+            <height>51</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="spinBox_MaxQSizeTimeout">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>120</y>
+            <width>421</width>
+            <height>27</height>
+           </rect>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="prefix">
+           <string>Timeout: </string>
+          </property>
+          <property name="minimum">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>100000</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_4">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>61</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="minimumSize">
+         <size>
+          <width>225</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>225</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_Ok">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Exit</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_Refresh">
+           <property name="text">
+            <string>Refresh</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
