@@ -5,7 +5,6 @@ Created on 2 Oct 2012
 '''
 
 from PyQt4 import QtGui, QtCore, uic, Qt
-from PyQt4.QtCore import QObject, pyqtSlot
 from PyRQ.Core.QueueServer.QueueServerDetails import QueueServerDetails
 from PyRQ.Ui.qt4.RRQDebugger.AboutDialog import AboutDialog
 from PyRQ.Ui.qt4.RRQDebugger.FiltererEnablers import Enablers
@@ -29,8 +28,6 @@ class RRQDebugger(QtGui.QMainWindow):
     RESOURCE_NAME = "MainWindow.ui"
     DEFAULT_SIZE_WIDTH = 1268
     DEFAULT_SIZE_HEIGHT = 648
-    DBUS_ADDRESS = "com.youview.rrq"
-    DBUS_SERVICE = "/com/youview/rrq"
     r"""
     Setup and configure a remote PyRQ debugging.
     """
@@ -38,7 +35,7 @@ class RRQDebugger(QtGui.QMainWindow):
         super(RRQDebugger, self).__init__()
         self.resourcesPath = resourcesPath
         self.settings = QtCore.QSettings()
-        self.settings.setPath(Qt.QSettings.IniFormat, Qt.QSettings.UserScope, "YouView-RRQDebugger")
+        self.settings.setPath(Qt.QSettings.IniFormat, Qt.QSettings.UserScope, "RRQDebugger")
         self.state = InternalState(self.settings)
         self.loggingLevel = logging.DEBUG
         self.logger = self._getLogger("Debugger", self.loggingLevel)
@@ -95,24 +92,8 @@ class RRQDebugger(QtGui.QMainWindow):
         self.setCentralWidget(self.splitter1)
         self._loadUi()
         self._checkMenu()
-#        self._createDbusIface()
         #    Asynchronously start the app - allows welcome screen to be shown etc.
         self.emit(QtCore.SIGNAL('Initialized()'))
-#    class DbusHandler(QObject):
-#        def __init__(self, parent):
-#            self._parent = parent
-#            super(RRQDebugger.DbusHandler, self).__init__()
-#        @QtCore.pyqtSlot('QString')
-#        def onDbusAction(self, *args, **kwargs):
-#            print "args...", args
-#            print "kwargs...", kwargs
-#    def _createDbusIface(self):
-#        self.dbusHandler = RRQDebugger.DbusHandler(self)
-#        Qt.QDBusConnection.sessionBus().connect("", "", RRQDebugger.DBUS_ADDRESS, "message", self.dbusHandler.onDbusAction)
-#        Qt.QDBusConnection.sessionBus().registerObject(RRQDebugger.DBUS_SERVICE, self.dbusHandler)
-#        Qt.QDBusConnection.sessionBus().registerService(RRQDebugger.DBUS_ADDRESS)
-##        msg = Qt.QDBusMessage.createSignal("/", RRQDebugger.DBUS_ADDRESS, "message")
-##        Qt.QDBusConnection.sessionBus().send(msg)
     def _createScripter(self):
         self.scripter = Scripter(self)
         path = os.path.join(self.resourcesPath, Scripter.RESOURCE_NAME)

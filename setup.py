@@ -10,13 +10,15 @@ except ImportError:
     
 import os
 
-from PyRQ import __version__
+from PyRQ import getVersionString
 
 setup(
     name = "PyRQ",
-    version = __version__,
+    version = getVersionString(),
     url = 'https://github.com/sys-git/PyRQ',
     packages = find_packages(),
+    package_dir = {'PyRQ': 'PyRQ'},
+    package_data={'PyRQ': ['resources/*.ui', 'resources/icons/actions/*.png', 'resources/icons/*.png']},
     include_package_data = True,
     author = "Francis Horsman",
     author_email = "francis.horsman@gmail.com",

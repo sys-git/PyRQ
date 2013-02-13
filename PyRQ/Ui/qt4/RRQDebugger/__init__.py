@@ -7,10 +7,10 @@ import os
 import subprocess
 import sys
 
-def RunRRQDebugger(quiet=True, details=None, host="127.0.0.1"):
+def RunRRQDebugger(quiet=True, details=[], host="127.0.0.1"):
     #    Launch the simple UI.
     from PyQt4 import QtGui, uic
-    resourcesPath = os.path.join(os.path.dirname(__file__), "resources")
+    resourcesPath = os.path.realpath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "resources"))
     path = os.path.join(resourcesPath, RRQDebugger.RESOURCE_NAME)
     app = QtGui.QApplication(sys.argv)
     inst = RRQDebugger(resourcesPath, details=details, quiet=quiet, host=host)
