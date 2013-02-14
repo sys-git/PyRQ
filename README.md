@@ -15,6 +15,10 @@ PyRQ
     then this is a bonus!
         ** This has not been tested or written with any thought to Python3 **
     
+    Installation:
+    Get it here: http://pypi.python.org/pypi/PyRQ
+    easy_install PyRQ
+    
     Dependencies (non-standard modules):
     Interface - multiprocessing (RLock, Semaphore)
     Impl      - multiprocessing (Rlock, Semaphore, Queue)
