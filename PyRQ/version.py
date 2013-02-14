@@ -5,9 +5,9 @@ Created on 20 Sep 2012
 '''
 import copy
 
-__pyrq_version = (0, 4, 0)
-__pyrq_version_string = "0.4.0"
-__pyrq_release_date = "2013.02.13"
+__pyrq_version = (0, 4, 1)
+__pyrq_version_string = "0.4.1"
+__pyrq_release_date = "2013.02.14"
 __pyrq_version_machine = "multiprocessing.queue.free"
 
 def getVersion():
