@@ -18,7 +18,7 @@ PyRQ
     Dependencies (non-standard modules):
     Interface - multiprocessing (RLock, Semaphore)
     Impl      - multiprocessing (Rlock, Semaphore, Queue)
-    Debugger  - PyQt4, qt4, multiprocessing (Rlock, Semaphore, Queue)
+    Debugger  - PyQt4, qt4, multiprocessing (Rlock, Semaphore, Queue), QsciScintilla
     
     Conceptually:
     A series of proxied multiprocessing-queues/lists (RQ) sit behind a socketserver
