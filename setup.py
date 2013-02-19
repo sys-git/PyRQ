@@ -23,7 +23,7 @@ setup(
     author = "Francis Horsman",
     author_email = "francis.horsman@gmail.com",
     description = "A pure Python remote queue (RQ) implementation using the standard Queue api.",
-    license = "BSD",
+    license = "GNU General Public License",
     classifiers = [
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
