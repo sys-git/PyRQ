@@ -84,4 +84,7 @@ PyRQ
     module (eg: pickling errors, data tracking, etc) in such a 'fluid' and
     stability-impaired alpha development environment which typically characterises
     bleeding-edge embedded development.
-    
+
+In case you're feeling generous:
+LTC: LT636SrauWAz9XDz2EKxAXQ5jKqehyhR69
+BTC: 13vS6cvzZXf1Yxrar2SYSPQrFLSEwLePV4
